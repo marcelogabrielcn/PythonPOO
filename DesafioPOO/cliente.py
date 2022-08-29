@@ -2,4 +2,9 @@ from DesafioPOO.pessoa import Pessoa
 
 
 class Cliente(Pessoa):
-    c1 = Pessoa('Marcelo', 23)
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+        self.conta = None
+
+    def inserir_conta(self, conta):
+        self.conta = conta
